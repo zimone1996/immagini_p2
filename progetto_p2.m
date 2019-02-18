@@ -72,9 +72,9 @@ end
 % da fare rumore 0.0010 per a = 3 con cellsize 2 e 4 (b = 1 e 2)(circa 12 ore)
 v=1:size(images,2); %vettore degli indici delle immagini totali
 %for a=1:5 %rumore
-    for b=1:3 %cell size
-        for i=1:3%size(images,2) % "i" indica la feature di test. (La feature testata è l'i-esima)
-       
+   % for b=1  %:3 %cell size
+   %     for i=1:3%size(images,2) % "i" indica la feature di test. (La feature testata è l'i-esima)
+     i=1;  b=1;
             t= setdiff(v,i); % vettore degli indici del training (tutte le features esclusa quella di test i-ma)
         
         % vettori contententi le features e le etichette per il training da passare al fitcecoc
@@ -98,8 +98,8 @@ v=1:size(images,2); %vettore degli indici delle immagini totali
              risultati.condizioni(a).cellsize(b).test(i).predizioni= predict(classifier, test_feature);
            end
         i % stampiamo l'indice per sapere a che ciclo è arrivato il programma
-         end
-    end
+   %      end
+%    end
 
 
 %% Calcolo della matrice di confusione
