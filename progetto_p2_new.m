@@ -1,7 +1,7 @@
 %% P2
 % crea database:
 % dalla directory/path personale andiamo a prendere il database Yale fornito
-imagespath=dir('C:\Users\cecil\Documents\Universita\ElaborazioneImmagini\Progetto\Database_per_gli_elaborati_di_Tipo_2_20190202\Yale\Yale');
+imagespath=dir('C:\Users\Simone\Desktop\uni\immagini\database per gli elaborati di Tipo 2-20190208\Yale\Yale');
 imagespath;
 ImagesPath=imagespath(4:end,:);% Sono eliminati i primi tre elementi perche' non sono immagini
 
@@ -145,6 +145,7 @@ for i= 1: 5
     end
 end
 
+%media e dev standard counter
 for i = 1 :3 
     media_counter(i)=mean(counter(:,i));
     dev_counter(i) = std(counter(:,i));
@@ -158,7 +159,7 @@ for i= 1: 5
     end
 end
 
-
+%media e dev standard accuratezza
 for i = 1 :3 
     media_accuracy(i)=mean(accuratezza(:,i));
     dev_accuracy(i) = std(accuratezza(:,i));
@@ -168,10 +169,11 @@ end
 %cell size 1
  for i = 1 :11
        for a = 1 :5
-           %calcolo racall        
+           %calcolo racall e precision       
            recall(a,i) =  analisi_dati.condizioni(a).cellsize(1).recall(i).recall;
            precision(a,i) = analisi_dati.condizioni(a).cellsize(1).precision(i).precision;
        end 
+           %media e dev standard recall e precision
            media_recall_1(i) = mean(recall(:,i));
            media_precision_1(i) = mean(precision(:,i));
            dev_recall_1(i) = std(recall(:,i));
@@ -182,10 +184,11 @@ end
  %cell size 2
  for i = 1 :11
        for a = 1 :5
-           %calcolo racall        
+           %calcolo racall e precisione       
            recall(a,i) =  analisi_dati.condizioni(a).cellsize(2).recall(i).recall;
            precision(a,i) = analisi_dati.condizioni(a).cellsize(2).precision(i).precision;
        end 
+           %media e dev standard recall e precision
            media_recall_2(i) = mean(recall(:,i));
            media_precision_2(i) = mean(precision(:,i));
            dev_recall_2(i) = std(recall(:,i));
@@ -195,10 +198,11 @@ end
   %cell size 3
  for i = 1 :11
        for a = 1 :5
-           %calcolo racall        
+           %calcolo racall e precisione     
            recall(a,i) =  analisi_dati.condizioni(a).cellsize(3).recall(i).recall;
            precision(a,i) = analisi_dati.condizioni(a).cellsize(3).precision(i).precision;
        end 
+           %media e dev standard recall e precision
            media_recall_3(i) = mean(recall(:,i));
            media_precision_3(i) = mean(precision(:,i));
            dev_recall_3(i) = std(recall(:,i));
@@ -246,7 +250,7 @@ yticks(0:10:100)
 xticklabels({' ','cell size 2x2','cell size 4x4','cell size 8x8'})
 xtickangle(45)
 
-
+%% cell size 2x2
 figure
 %recall per tutte e 11
 x=1:1:11;
@@ -347,3 +351,15 @@ xticklabels({' ','glasses','happy','leftlight','noglasses','normal','rightlight'
     'surprised','wink','centerlight',' '})
 xtickangle(45)
 
+% 
+% for i = 1 : 5
+%      recall_rightlight_1(i) = analisi_dati.condizioni(i).cellsize(1).recall(6).recall;
+%      recall_rightlight_2(i) = analisi_dati.condizioni(i).cellsize(2).recall(6).recall;
+%      recall_rightlight_3(i) = analisi_dati.condizioni(i).cellsize(3).recall(6).recall;
+% end
+% 
+% for i = 1 : 5
+%      precision_rightlight_1(i) = analisi_dati.condizioni(i).cellsize(1).precision(6).precision;
+%      precision_rightlight_2(i) = analisi_dati.condizioni(i).cellsize(2).precision(6).precision;
+%      precision_rightlight_3(i) = analisi_dati.condizioni(i).cellsize(3).precision(6).precision;
+% end
