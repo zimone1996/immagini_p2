@@ -1,5 +1,6 @@
 # immagini_p2
 TASK:
+
 Implementare una logica di classificazione basata su descrittori HOG e classificatore "fitcecoc"
 
 Valutare le prestazioni del sistema con la logica del leave one out.
