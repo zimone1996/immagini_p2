@@ -11,3 +11,15 @@ Valutare le prestazioni del sistema con la logica del leave one out.
 Valutare la sensibilità delle prestazioni del sistema al crescere della potenza di un rumore gaussiano bianco aggiunto alle immagini.
 
 Ripetere i punti di sopra per diverse 'CellSize' (CellSize = [2 2], [4 4], [8 8]).
+
+Membri del gruppo 9:
+
+Simone Guarino
+
+Leonardo Loffredo
+
+Francesco Salvi
+
+Camilla Mussoni
+
+Cecilia Provenzale
