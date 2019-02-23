@@ -1,5 +1,8 @@
 # immagini_p2
 TASK:
+Dato il database Yale, contenente le immagini di 15 soggetti in 11 espressioni facciali/condizioni di illuminazione (gruppi) diverse.
+
+Sviluppare e confrontare le seguenti pipeline di classificazione delle espressioni facciali/condizioni di illuminazione.
 
 Implementare una logica di classificazione basata su descrittori HOG e classificatore "fitcecoc"
 
